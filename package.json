@@ -5,16 +5,20 @@
   "license": "MIT",
   "scripts": {
     "build": "npx tsc",
-    "start:prod": "node dist/app.js",
     "start": "tsc && node dist/app.js",
+    "dev": " npx nodemon",
+    "start:prod": "node dist/app.js",
     "lint": "eslint . --ext .ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "@types/express": "^4.17.1",
+    "@types/node": "^18.15.0",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
     "eslint": "^8.35.0",
+    "nodemon": "^2.0.21",
+    "ts-node": "^10.9.1",
     "typescript": "^4.9.5"
   },
   "dependencies": {
