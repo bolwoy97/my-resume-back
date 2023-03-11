@@ -3,11 +3,14 @@ import express from 'express';
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
+import cors from 'cors';
 
 import indexRouter from './routes/index';
 import mainPageRouter from './routes/mainPage';
 
 const app = express();
+
+app.use(cors())
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
