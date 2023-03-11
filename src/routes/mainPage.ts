@@ -2,7 +2,7 @@ import express from 'express';
 const router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/competencies', function(req, res, next) {
   res.status(200).send({ data: [
     {
       name: 'JavaScript',
