@@ -1,3 +1,5 @@
+import * as dotenv from 'dotenv' 
+dotenv.config();
 import createError from 'http-errors';
 import express from 'express';
 import path from 'path';
@@ -7,7 +9,9 @@ import cors from 'cors';
 
 import indexRouter from './routes/index';
 import resumeRouter from './routes/resume';
+import { init as initDB } from './db/conn';
 
+initDB();
 const app = express();
 
 app.use(cors())
