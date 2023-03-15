@@ -3,7 +3,7 @@ const router = express.Router();
 
 /* GET users listing. */
 router.get('/competencies', function(req, res, next) {
-  res.status(200).send({ data: [
+  const result = [
     {
       name: 'JavaScript',
       value: 80
@@ -37,7 +37,8 @@ router.get('/competencies', function(req, res, next) {
       value: 75
     },
     
-  ] });
+  ];
+  res.status(200).send({ data: result });  
 });
 
 export default router;
