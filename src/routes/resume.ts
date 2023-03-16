@@ -1,10 +1,10 @@
 import express from 'express';
-import db from '../utils/db';
+import { getCollection } from '../utils/db';
 const router = express.Router();
 
 /* GET users listing. */
 router.get('/competencies', async function(req, res, next) {
-  const collection = await db().collection("competencies");
+  const collection = await getCollection("competencies");
   const result = await collection.find({})
     .limit(50)
     .toArray();

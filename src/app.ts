@@ -9,9 +9,7 @@ import cors from 'cors';
 
 import indexRouter from './routes/index';
 import resumeRouter from './routes/resume';
-import { init as initDB } from './db/conn';
 
-initDB();
 const app = express();
 
 app.use(cors())
