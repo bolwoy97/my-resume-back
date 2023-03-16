@@ -6,6 +6,7 @@
   "scripts": {
     "build": "rimraf ./dist && tsc",
     "start:prod": "node dist/bin/www.js",
+    "start": "node dist/bin/www.js",
     "dev": "nodemon",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
