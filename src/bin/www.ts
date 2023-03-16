@@ -85,7 +85,8 @@ function onError(error: { syscall: string; code: any; }) {
  */
 
 function onListening() {
-  const addr  = server.address();
+  const addr = server.address();
+  if (!addr) throw new Error("No address");
   const bind = typeof addr === 'string'
     ? `pipe ${addr}`
     : `port ${addr.port}...`;
