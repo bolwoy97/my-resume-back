@@ -16,8 +16,11 @@ export async function init(): Promise<void>{
   }
 }
 
-function db(): Db{  
-  return db_instance;
+async function getCollection(coll_name: string){
+  if (!db_instance || !db_instance.collection){
+    await init();
+  }
+  return await db_instance.collection(coll_name);
 }
 
-export default db;
+export default getCollection;

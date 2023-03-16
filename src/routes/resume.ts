@@ -1,5 +1,5 @@
 import express from 'express';
-import db from '../db/conn';
+import db from '../utils/db';
 const router = express.Router();
 
 /* GET users listing. */
